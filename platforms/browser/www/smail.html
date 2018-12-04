@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Send Mail Page</title>
+</head>
+
+<body>
+    <section id="one" class="wrapper special">
+        <div class="inner">
+            <header class="major">
+                <h2>寄信</h2>
+            </header>
+            <div class="features">
+                <div class="feature">
+                    <h1>寄件人</h1>
+                    <input type="text" name="sender" id="sender" value="ray@shclab.idv.tw" readonly="readonly"><br>
+                    <h1>收件人</h1>
+                    <input type="text" name="adress" id="receiver"><br>
+                    <h1>主旨</h1>
+                    <input type="text" name="title" id="title"><br>
+                    <textarea rows="20" cols="40" name="msg" form="mail" id="msg"></textarea>
+                    <label class="item-input">
+                        <button class="button button-block button-positive" id="submit">Submit</button>
+                    </label>
+                </div>
+            </div>
+            <div class="feature">
+                <i class="fa fa-paper-plane-o"></i>
+                <p><input type="button" onclick="javascript:location.href='index.html'" value="回首頁"></input></p>
+            </div>
+        </div>
+    </section>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/skel.min.js"></script>
+    <script src="js/util.js"></script>
+    <script src="js/main.js"></script>
+    <script src="cordova.js"></script>
+    <script src="js/smail.js"></script>
+</body>
+
+</html>
