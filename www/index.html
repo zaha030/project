@@ -9,7 +9,8 @@
     <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
     <link rel="stylesheet" href="css/main.css" />
     <title>Home Page</title>
-    <script type="text/javascript"> //判斷是否登入
+    <script type="text/javascript">
+    //判斷是否登入
     var url = window.location.pathname;
     var filename = url.substring(url.lastIndexOf('/') + 1);
     if (localStorage.login == "true" && filename == 'login.html') {
@@ -31,15 +32,17 @@
             <div class="features">
                 <div class="feature">
                     <i class="fa fa-diamond"></i>
-                    <p><input type ="button" onclick="javascript:location.href='smail.html'" value="郵件寄送"></input></p>
+                    <p><input type="button" onclick="javascript:location.href='smail.html'" value="郵件寄送"></input></p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-copy"></i>
-                    <p><input type ="button" onclick="javascript:location.href='log.html'" value="資料統計"></input></p>
+                    <p><input type="button" onclick="javascript:location.href='log.html'" value="資料統計"></input></p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-paper-plane-o"></i>
                     <p><button class="button button-block button-positive" id="logout">登出</button></p>
+                </div>
+                <div class="feature" id="show">
                 </div>
             </div>
         </div>
@@ -50,6 +53,13 @@
     <script src="js/main.js"></script>
     <script src="cordova.js"></script>
     <script src="js/logout.js"></script>
+    <script>
+    $(function() {
+        var w = $(window).width();
+        var h = $(window).height();
+        $("#show").html(w + ":" + h);
+    });
+    </script>
 </body>
 
 </html>
