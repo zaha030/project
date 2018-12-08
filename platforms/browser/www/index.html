@@ -31,18 +31,16 @@
             </header>
             <div class="features">
                 <div class="feature">
-                    <i class="fa fa-diamond"></i>
-                    <p><input type="button" onclick="javascript:location.href='smail.html'" value="郵件寄送"></input></p>
+                    <i class="fa fa-envelope-o"></i>
+                    <p><input type="button" onclick="javascript:location.href='smail.html'" value="郵件寄送" class="button special"></input></p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-copy"></i>
-                    <p><input type="button" onclick="javascript:location.href='log.html'" value="資料統計"></input></p>
+                    <p><input type="button" onclick="javascript:location.href='log.html'" value="資料統計" class="button special"></input></p>
                 </div>
                 <div class="feature">
                     <i class="fa fa-paper-plane-o"></i>
-                    <p><button class="button button-block button-positive" id="logout">登出</button></p>
-                </div>
-                <div class="feature" id="show">
+                    <p><button class="button button-block button-positive button special" id="logout" >登出</button></p>
                 </div>
             </div>
         </div>
@@ -53,13 +51,6 @@
     <script src="js/main.js"></script>
     <script src="cordova.js"></script>
     <script src="js/logout.js"></script>
-    <script>
-    $(function() {
-        var w = $(window).width();
-        var h = $(window).height();
-        $("#show").html(w + ":" + h);
-    });
-    </script>
 </body>
 
 </html>
