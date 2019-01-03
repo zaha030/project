@@ -6,7 +6,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "http://125.227.64.24/project/web_app/barChart.php",
+            url: "http://125.227.64.24/project/statistics/barChart.php",
             data: dataString,
             crossDomain: true,
             cache: false,
@@ -14,20 +14,24 @@ $(document).ready(function() {
                 console.log(data);
                 var sendnum = data[0];
                 var opennum = data[1];
+                var clicknum = data[2];
                 var dopennum = data[0] - data[1];
+                var dclicknum = data[0] - data[2];
 
                 var ctx = document.getElementById("barChart");
                 var barChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["總計", "有開啟", "沒開啟"],
+                        labels: ["總計", "有開啟(預覽)信件", "沒開啟(預覽)信件" , "有點擊連結", "沒點擊連結"],
                         datasets: [{
                             label: '# of mails',
-                            data: [sendnum, opennum, dopennum],
+                            data: [sendnum, opennum, dopennum, clicknum, dclicknum],
                             backgroundColor: [
                                 "#FF0000",
                                 "#00FF00",
-                                "#0000EE"
+                                "#0000EE",
+                                "#FFFF00",
+                                "#7700BB"
                             ],
                         }]
                     },
@@ -55,7 +59,7 @@ $(document).ready(function() {
 
         $.ajax({
             type: "POST",
-            url: "http://125.227.64.24/project/web_app/horizontalChart.php",
+            url: "http://125.227.64.24/project/statistics/horizontalChart.php",
             data: dataString,
             crossDomain: true,
             cache: false,

@@ -22,7 +22,7 @@ $(document).ready(function() {
                 var barChart = new Chart(ctx, {
                     type: 'bar',
                     data: {
-                        labels: ["總計", "有開啟(預覽)信件", "沒開啟(預覽)信件" , "有點擊連結", "沒點擊連結"],
+                        labels: ["總寄件數", "有開啟(預覽)信件", "沒開啟(預覽)信件" , "有點擊連結", "沒點擊連結"],
                         datasets: [{
                             label: '# of mails',
                             data: [sendnum, opennum, dopennum, clicknum, dclicknum],
@@ -39,7 +39,9 @@ $(document).ready(function() {
                         scales: {
                             yAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    min: 0,
+                                    stepSize: 1
                                 }
                             }]
                         }
@@ -212,7 +214,9 @@ $(document).ready(function() {
                         scales: {
                             xAxes: [{
                                 ticks: {
-                                    beginAtZero: true
+                                    beginAtZero: true,
+                                    min: 0,
+                                    stepSize: 1
                                 }
                             }]
                         }
